@@ -1,18 +1,18 @@
 ﻿// Exercise.2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
-//Exercise.2.cpp
+//Exercise.4
 #include<iostream>
 #include<string>
 int main(void)
 {
 	using namespace std;
-	string name,dessert;
-	cout << "Enter your name:\n";
-	getline(cin, name);
-	cout << "Enter your favorite dessert:\n";
-	getline(cin, dessert);
-	cout << "I have some delicious " << dessert;
-	cout << " for you, " << name << ".\n";
+	string fir_name, las_name, name;
+	cout << "Enter your first name:\n";
+	getline(cin,fir_name);
+	cout << "Enter your last name:\n";
+	getline(cin,las_name);
+	name = las_name + " ," + fir_name;
+	cout << "Here's the information in a single string: " << name;
 	return 0;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
