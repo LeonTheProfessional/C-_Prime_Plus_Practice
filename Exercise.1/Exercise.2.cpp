@@ -1,28 +1,22 @@
 ﻿// Exercise.2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
-//Exercise.4
-//Exercise.5
 #include<iostream>
-#include<string>
+#include<array>
 int main(void)
 {
 	using namespace std;
-	struct PizaThings
-	{
-		string company;
-		int diameter;
-		double weight;
-	};
-	PizaThings whatever;
-	cout << "What company does the piza come from?" << endl;
-	getline(cin, whatever.company);
-	cout << "The size of the piza?" << endl;
-	cin >> whatever.diameter;
-	cout << "Please tell me piza's wight.\n";
-	cin >> whatever.weight;
-	cout << "This is a piza made by " << whatever.company << " with " << whatever.diameter << " inchs diameter and "
-		<< whatever.weight << " grams weight.";
-	return 0;  
+	array<double, 3> score;
+	cout << "Please enter the 40 yards sprint score of first time: ";
+	cin >> score[0];
+	cout << "Please enter the sprint score of second time: ";
+	cin >> score[1];
+	cout << "Please enter the sprint score of third time: ";
+	cin >> score[2];
+	cout << "The score of first time: " << score[0] << " Sec\n";
+	cout << "The score of second time: " << score[1] << " Sec\n";
+	cout << "The score of third time: " << score[2] << " Sec\n";
+	cout << "The average score:" << (score[0]+score[1]+score[2])/3 << " Sec";
+	return 0;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
