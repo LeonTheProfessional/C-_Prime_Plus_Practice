@@ -1,19 +1,28 @@
 ﻿// Exercise.2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 //Exercise.4
+//Exercise.5
 #include<iostream>
 #include<string>
 int main(void)
 {
 	using namespace std;
-	string fir_name, las_name, name;
-	cout << "Enter your first name:\n";
-	getline(cin,fir_name);
-	cout << "Enter your last name:\n";
-	getline(cin,las_name);
-	name = las_name + " ," + fir_name;
-	cout << "Here's the information in a single string: " << name;
-	return 0;
+	struct PizaThings
+	{
+		string company;
+		int diameter;
+		double weight;
+	};
+	PizaThings whatever;
+	cout << "What company does the piza come from?" << endl;
+	getline(cin, whatever.company);
+	cout << "The size of the piza?" << endl;
+	cin >> whatever.diameter;
+	cout << "Please tell me piza's wight.\n";
+	cin >> whatever.weight;
+	cout << "This is a piza made by " << whatever.company << " with " << whatever.diameter << " inchs diameter and "
+		<< whatever.weight << " grams weight.";
+	return 0;  
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
